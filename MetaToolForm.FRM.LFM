@@ -1,0 +1,256 @@
+object UDF1: TTrainerForm
+  Left = 472
+  Height = 225
+  Top = 331
+  Width = 258
+  BorderIcons = [biSystemMenu, biMinimize]
+  BorderStyle = bsSingle
+  Caption = 'SAGE META TOOL V1'
+  ClientHeight = 225
+  ClientWidth = 258
+  Color = clSilver
+  Position = poScreenCenter
+  object CETrackBar1: TCETrackBar
+    Left = -1
+    Height = 25
+    Top = 105
+    Width = 220
+    Max = 232
+    Min = -9
+    OnChange = CETrackBar1Change
+    Position = 1
+    TabOrder = 0
+  end
+  object CELabel1: TCELabel
+    Left = 7
+    Height = 12
+    Top = 93
+    Width = 127
+    Caption = 'Gamespeed (NUM+,NUM-)'
+    Color = clSilver
+    Font.CharSet = OEM_CHARSET
+    Font.Height = -12
+    Font.Name = 'Terminal'
+    Font.Pitch = fpFixed
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+    Transparent = False
+  end
+  object CELabel3: TCELabel
+    Left = 27
+    Height = 48
+    Top = 172
+    Width = 211
+    Caption = 'GAMES: CNC3TW, CNC3KW, CNCZH (TUC),'#13#10'BFME2, BFME2ROTWK'#13#10'Contact: discord.gg/TfdcQTn'#13#10'Made by Mjjstral aka MetaIdea'
+    Color = clSilver
+    Font.CharSet = OEM_CHARSET
+    Font.Color = clTeal
+    Font.Height = -12
+    Font.Name = 'Terminal'
+    Font.Pitch = fpFixed
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+    Transparent = False
+  end
+  object CETrackBar2: TCETrackBar
+    Left = 91
+    Height = 29
+    Top = 129
+    Width = 220
+    Max = 20
+    Min = 1
+    OnChange = CETrackBar2Change
+    Position = 11
+    TabOrder = 1
+    Visible = False
+  end
+  object CELabel4: TCELabel
+    Left = 3
+    Height = 16
+    Top = 132
+    Width = 83
+    Caption = 'Gamespeed2'
+    Color = clBackground
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -13
+    Font.Name = 'Arial'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+    Transparent = False
+    Visible = False
+  end
+  object CELabel6: TCELabel
+    Left = 27
+    Height = 15
+    Top = 112
+    Width = 19
+    Caption = 'FPS'
+    Color = 11403351
+    ParentColor = False
+    Transparent = False
+    Visible = False
+  end
+  object CETrackBar3: TCETrackBar
+    Left = 75
+    Height = 29
+    Top = 105
+    Width = 236
+    Max = 60
+    Min = 1
+    OnChange = CETrackBar3Change
+    Position = 36
+    TabOrder = 2
+    Visible = False
+  end
+  object CEEdit1: TCEEdit
+    Left = 216
+    Height = 23
+    Top = 104
+    Width = 40
+    Color = clSilver
+    OnClick = CEEdit1Click
+    TabOrder = 3
+    Text = '1'
+    SelStart = 1
+    SelLength = 0
+  end
+  object CEEdit2: TCEEdit
+    Left = 308
+    Height = 23
+    Top = 128
+    Width = 40
+    Color = clSilver
+    OnClick = CEEdit2Click
+    TabOrder = 4
+    Text = '1'
+    Visible = False
+    SelStart = 1
+    SelLength = 0
+  end
+  object CEEdit3: TCEEdit
+    Left = 312
+    Height = 23
+    Top = 104
+    Width = 28
+    OnClick = CEEdit3Click
+    TabOrder = 5
+    Text = '6'
+    Visible = False
+    SelStart = 1
+    SelLength = 1
+  end
+  object CEToggleBox1: TCEToggleBox
+    Left = 2
+    Height = 45
+    Top = 45
+    Width = 130
+    Caption = 'NO CAM ZOOM LIMIT (F3)'
+    Color = clBlack
+    Font.CharSet = OEM_CHARSET
+    Font.Height = -12
+    Font.Name = 'Terminal'
+    Font.Pitch = fpFixed
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    OnClick = CEToggleBox1Click
+    ParentFont = False
+    TabOrder = 6
+  end
+  object CEToggleBox2: TCEToggleBox
+    Left = 126
+    Height = 45
+    Top = 1
+    Width = 130
+    Caption = '60 FPS'#13#10'(F2)'
+    Color = clBlack
+    Font.CharSet = OEM_CHARSET
+    Font.Height = -12
+    Font.Name = 'Terminal'
+    Font.Pitch = fpFixed
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    OnClick = CEToggleBox2Click
+    ParentFont = False
+    TabOrder = 7
+  end
+  object CEToggleBox3: TCEToggleBox
+    Left = 130
+    Height = 45
+    Top = 45
+    Width = 126
+    Caption = 'AI CoControl'#13#10'(F4)'
+    Color = clBlack
+    Font.CharSet = OEM_CHARSET
+    Font.Height = -12
+    Font.Name = 'Terminal'
+    Font.Pitch = fpFixed
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    OnClick = CEToggleBox3Click
+    ParentFont = False
+    TabOrder = 8
+  end
+  object CEToggleBox4: TCEToggleBox
+    Left = 2
+    Height = 45
+    Top = 1
+    Width = 130
+    Caption = 'ENABLE'#13#10'(F1)'
+    Color = clBlack
+    Font.CharSet = OEM_CHARSET
+    Font.Height = -12
+    Font.Name = 'Terminal'
+    Font.Pitch = fpFixed
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    OnClick = CEToggleBox4Click
+    ParentFont = False
+    TabOrder = 9
+  end
+  object CELabel5: TCELabel
+    Left = 7
+    Height = 12
+    Top = 132
+    Width = 139
+    Caption = 'CameraPitch (NUM1,NUM3)'
+    Color = clSilver
+    Font.CharSet = OEM_CHARSET
+    Font.Height = -12
+    Font.Name = 'Terminal'
+    Font.Pitch = fpFixed
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+    Transparent = False
+  end
+  object CETrackBar4: TCETrackBar
+    Left = -1
+    Height = 25
+    Top = 145
+    Width = 220
+    Max = 90
+    OnChange = CETrackBar4Change
+    Position = 37
+    TabOrder = 10
+  end
+  object CEEdit4: TCEEdit
+    Left = 216
+    Height = 23
+    Top = 140
+    Width = 40
+    Color = clSilver
+    OnClick = CEEdit4Click
+    TabOrder = 11
+    Text = '37.5'
+    SelStart = 0
+    SelLength = 0
+  end
+end
